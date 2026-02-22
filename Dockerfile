@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM openjdk:27-ea-nanoserver-ltsc2025
 
 EXPOSE 8080
 
