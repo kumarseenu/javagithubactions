@@ -12,28 +12,6 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-apply plugin: 'maven-publish'
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            artifact bootJar
-        }
-    }
-
-    repositories {
-        maven {
-            name 'nexus'
-            url "http://167.99.248.163:8081/repository/maven-snapshots/"
-            allowInsecureProtocol = true
-            credentials {
-                username project.repoUser
-                password project.repoPassword
-            }
-        }
-    }
-}
-
 repositories {
     mavenCentral()
 }
